@@ -7,11 +7,13 @@
     "preview": "vite preview --port 5050",
     "typecheck": "vue-tsc --noEmit",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
-    "deploy": "sh deploy.sh"
+    "deploy": "sh deploy.sh",
+    "format": "prettier --check \"**/*.{js,json,vue,scss}\" --write"
   },
   "dependencies": {
     "axios": "^0.26.0",
     "pinia": "^2.0.11",
+    "sass": "^1.49.7",
     "vue": "^3.2.29",
     "vue-axios": "^3.4.1",
     "vue-router": "^4.0.12"
