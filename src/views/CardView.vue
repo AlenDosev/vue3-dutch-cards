@@ -18,14 +18,6 @@ export default {
       }
     });
 
-    document.addEventListener("swiped-left", () => {
-      alert("left");
-    });
-
-    document.addEventListener("swiped-right", () => {
-      alert("right");
-    });
-
     const { data } = await this.axios.get(
       "https://sheets.googleapis.com/v4/spreadsheets/1EHBijDmk5nIANiYF4aiUViKKNPfKfgdw-Ws4B8Xt5mA/values/H1!A2:B200?key=AIzaSyDXokXhuuI6PRqUDAMw1dDhOKXlFHcWDh0"
     );
@@ -119,12 +111,12 @@ export default {
       width: 100%;
       height: 100%;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-      transition: transform 1s;
+      transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       transform-style: preserve-3d;
 
       &.fliped {
         transform: rotateY(180deg);
-        transition: transform 0.5s;
+        transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       }
 
       .front,
@@ -139,6 +131,7 @@ export default {
         font-size: 55px;
         border-radius: 5px;
         backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
       }
 
       .back {
